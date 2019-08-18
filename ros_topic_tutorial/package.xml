@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>ros_topic_tutorial</name>
+  <version>1.0.0</version>
+  <description>The ros_topic_tutorial package</description>
+  <license>MIT</license>
+  <author email="cuihang1201@gmail.com">Hang Cui</author>
+  <maintainer email="cuihang1201@gmail.com">Hang Cui</maintainer>
+  <url type="bugtracker">https://github.com/hangcui1201/ROS_PYTHON</url>
+  <url type="repository">https://github.com/hangcui1201/ROS_PYTHON</url>
+  <url type="website">https://github.com/hangcui1201/ROS_PYTHON</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <export>
+  </export>
+</package>
