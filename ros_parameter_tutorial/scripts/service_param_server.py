@@ -12,24 +12,6 @@ from ros_parameter_tutorial.srv import ServiceParamMessage, ServiceParamMessageR
 g_operator = 1
 
 
-def switch_color(g_operator, req_value1, req_value2):
-
-	divide_result = 0
-
-	if(req_value2 != 0):
-		divide_result = req_value1/(req_value2*1.0)
-
-	switcher = {
-   		
-        1: req_value1+req_value2,
-        2: req_value1-req_value2,
-        3: req_value1*req_value2,
-        4: divide_result,
-    }
-
-	return switcher.get(g_operator, req_value1+req_value2)
-
-
 # The below process is performed when there is a service request
 def calculationCallback(request):
 
@@ -37,12 +19,25 @@ def calculationCallback(request):
 
 	response = ServiceParamMessageResponse()
 
-	response.result = switch_color(g_operator, request.num_1, request.num_2)
+	if(g_operator == 1):
+		response.result = request.num_1 + request.num_2
+	elif(g_operator == 2):
+		response.result = request.num_1 - request.num_2
+	elif(g_operator == 3):
+		response.result = request.num_1 * request.num_2
+	elif(g_operator == 4):
+		if(request.num_2 == 0):
+			response.result = 0
+		else:
+			response.result = request.num_1 // request.num_2
+	else:
+		rospy.loginfo("Default calculation_method: PLUS")
+		response.result = request.num_1 + request.num_2
 
 	rospy.loginfo("Request: x=%ld, y=%ld" % (request.num_1, request.num_2))
 	rospy.loginfo("Sending back response: %ld" % response.result)
 
-	return True
+	return response.result
 
 
 
@@ -52,7 +47,7 @@ def main():
 
 	rospy.init_node('service_param_server')
 
-	rospy.set_param("calculation_method", 1)
+	rospy.set_param("calculation_method", g_operator)
 
 	ros_service_param_server = rospy.Service("ros_service_param",\
 												ServiceParamMessage, \
@@ -62,7 +57,9 @@ def main():
 
 	rate = rospy.Rate(10)
 
-	while True:
+	while not rospy.is_shutdown():
+
+		g_operator = rospy.get_param("calculation_method")
 
 		rospy.set_param("calculation_method", g_operator)
 
