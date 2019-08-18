@@ -55,7 +55,12 @@ $ roscore
 $ source devel/setup.bash  
 $ rosrun ros_parameter_tutorial service_param_server.py
 
+
 #### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_parameter_tutorial service_param_client.py 10 5
+
+#### Terminal 4
 
 $ rosservice list  
 $ rosservice call /ros_service_param 10 5  
