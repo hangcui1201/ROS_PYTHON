@@ -78,12 +78,23 @@ $ rosservice call /ros_service_param 10 5
 
 #### Terminal 1
 $ source devel/setup.bash  
-$ roslaunch usb_cam usb_cam.launch
+$ roslaunch usb_cam usb_cam.launch  
 
 #### Terminal 2
 $ source devel/setup.bash  
-$ rosrun ros_image_tutorial image_pub_sub.py
+$ rosrun ros_image_tutorial image_pub_sub.py  
 
+### Lesson 6: ROS 2D Laser Scanner Tutorial
+
+#### Terminal 1
+[HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
+  
+$ source devel/setup.bash  
+$ roslaunch hls_lfcd_lds_driver hlds_laser.launch  
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
 
 
