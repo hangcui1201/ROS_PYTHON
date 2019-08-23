@@ -10,11 +10,13 @@ import csv
 stamp = None
 stamp_str = None
 stamp_count = 0   # in seconds
-record_laser = []
 
 data_len = 0
 
-head_str = "time x y z"
+record_secs = 5
+record_laser = []
+
+head_str = "time x y z intensity ring"
 record_laser.append(head_str)
 
 def pointcloud2_callback(pc_msg) :
@@ -49,7 +51,8 @@ def pointcloud2_callback(pc_msg) :
 	global stamp_str
 	global stamp_count
 	global record_laser
-	global old_data_len
+	global record_secs
+	global data_len
 
 	stamp_curr = pc_msg.header.stamp.secs
 
@@ -61,17 +64,17 @@ def pointcloud2_callback(pc_msg) :
 		data_len = len(record_laser)
 		record_laser.append("\n")
 
-
-	if(stamp_count <= 30):
-		for p in pc2.read_points(pc_msg, field_names = ("x", "y", "z"), skip_nans=True):
-			# print("time:%s x:%s y:%s z:%s" % (stamp_str, p[0], p[1], p[2]))
-			txyz_str = "%s %s %s %s" % (stamp_str, p[0], p[1], p[2])
+	# record record_secs seconds data points
+	if(stamp_count <= record_secs):
+		for p in pc2.read_points(pc_msg, field_names = ("x", "y", "z", "intensity", "ring"), skip_nans=True):
+			# print("time:%s x:%s y:%s z:%s intensity:%s ring:%s" % (stamp_str, p[0], p[1], p[2], p[3], p[4]))
+			txyz_str = "%s %s %s %s %s %s" % (stamp_str, p[0], p[1], p[2], p[3], p[4])
 			record_laser.append(txyz_str)
 	else:
-		# with open("record_laser.csv", "w") as outfile:
-		# 	for entries in record_laser:
-		# 		outfile.write(entries)
-		# 		outfile.write("\n")
+		with open("record_laser.csv", "w") as outfile:
+			for entries in record_laser:
+				outfile.write(entries)
+				outfile.write("\n")
 		print("End Record")
 
 def main():
