@@ -53,12 +53,12 @@ $ roscore
 
 #### Terminal 2
 $ source devel/setup.bash  
-$ rosrun ros_parameter_tutorial service_param_server.py
+$ rosrun ros_parameter_tutorial service_param_server.py  
 
 
 #### Terminal 3
 $ source devel/setup.bash  
-$ rosrun ros_parameter_tutorial service_param_client.py 10 5
+$ rosrun ros_parameter_tutorial service_param_client.py 10 5  
 
 #### Terminal 4
 
@@ -86,13 +86,23 @@ $ rosrun ros_image_tutorial image_pub_sub.py
 
 ### Lesson 6: ROS 2D Laser Scanner Tutorial
 
-#### Terminal 1
 [HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
-  
+
+#### Terminal 1
+
 $ source devel/setup.bash  
 $ roslaunch hls_lfcd_lds_driver hlds_laser.launch  
 
 #### Terminal 2
+
+$ source devel/setup.bash  
+$ roslaunch ros_2d_laser_tutorial tf_scan.launch  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun rviz rviz  
+
+#### Terminal 4
 $ source devel/setup.bash  
 $ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
