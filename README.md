@@ -74,7 +74,36 @@ $ rosservice call /ros_service_param 10 5
 $ rosparam set /calculation_method 4  
 $ rosservice call /ros_service_param 10 5  
 
-### Lesson 5: ROS Image Tutorial
+
+### Lesson 5: ROS TF Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ rosrun ros_tf_tutorial tf_rotation_conversions.py  
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_tf_tutorial tf_odom_sub.py  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ roslaunch ros_tf_tutorial static_transform_publisher.launch  
+
+#### Terminal 4
+$ source devel/setup.bash  
+$ rosrun tf view_frames  
+$ rosrun tf tf_echo frame_a frame_b  
+
+#### Terminal 5
+$ source devel/setup.bash  
+$ rosrun ros_tf_tutorial frame_a_to_frame_b_broadcaster.py  
+
+#### Terminal 6
+$ source devel/setup.bash  
+$ rosrun ros_tf_tutorial frame_a_to_frame_b_listener.py  
+
+
+### Lesson 6: ROS Image Tutorial
 
 #### Terminal 1
 $ source devel/setup.bash  
@@ -84,7 +113,8 @@ $ roslaunch usb_cam usb_cam.launch
 $ source devel/setup.bash  
 $ rosrun ros_image_tutorial image_pub_sub.py  
 
-### Lesson 6: ROS 2D Laser Scanner Tutorial
+
+### Lesson 7: ROS 2D Laser Scanner Tutorial
 
 [HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
 
