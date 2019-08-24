@@ -1,4 +1,4 @@
-## ROS Basic Tutorials (Python)
+## ROS Tutorials (Python)
 
 ### Lesson 1: ROS Topic Tutorial
 
