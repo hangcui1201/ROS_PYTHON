@@ -114,7 +114,13 @@ $ source devel/setup.bash
 $ rosrun ros_image_tutorial image_pub_sub.py  
 
 
-### Lesson 7: ROS 2D Laser Scanner Tutorial
+### Lesson 7: ROS Image RGBD Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+
+
+### Lesson 8: ROS 2D Laser Tutorial
 
 [HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
 
@@ -137,6 +143,10 @@ $ source devel/setup.bash
 $ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
 
+### Lesson 9: ROS 3D Laser Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
 
 
 
