@@ -1,5 +1,6 @@
 ## ROS Tutorials (Python)
 
+
 ### Lesson 1: ROS Topic Tutorial
 
 #### Terminal 1  
@@ -13,6 +14,7 @@ $ rosrun ros_topic_tutorial topic_publisher.py
 #### Terminal 3  
 $ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_subscriber.py  
+
 
 
 ### Lesson 2: ROS Service Tutorial
@@ -30,6 +32,7 @@ $ source devel/setup.bash
 $ rosrun ros_service_tutorial service_client.py 11 12  
 
 
+
 ### Lesson 3: ROS Action Tutorial
 
 #### Terminal 1  
@@ -45,6 +48,7 @@ $ source devel/setup.bash
 $ rosrun ros_action_tutorial action_client.py  
 
 
+
 ### Lesson 4: ROS Parameters Tutorial
 
 #### Terminal 1
@@ -54,7 +58,6 @@ $ roscore
 #### Terminal 2
 $ source devel/setup.bash  
 $ rosrun ros_parameter_tutorial service_param_server.py  
-
 
 #### Terminal 3
 $ source devel/setup.bash  
@@ -73,6 +76,7 @@ $ rosservice call /ros_service_param 10 5
 
 $ rosparam set /calculation_method 4  
 $ rosservice call /ros_service_param 10 5  
+
 
 
 ### Lesson 5: ROS TF Tutorial
@@ -103,7 +107,24 @@ $ source devel/setup.bash
 $ rosrun ros_tf_tutorial frame_a_to_frame_b_listener.py  
 
 
-### Lesson 6: ROS Image Tutorial
+
+### Lesson 6: ROS Navigation Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch  
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/hang/ros/tb3_house_map.yaml  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_navigation_tutorial nav_goal.py  
+
+
+
+### Lesson 7: ROS Image Tutorial
 
 #### Terminal 1
 $ source devel/setup.bash  
@@ -114,13 +135,15 @@ $ source devel/setup.bash
 $ rosrun ros_image_tutorial image_pub_sub.py  
 
 
-### Lesson 7: ROS Image RGBD Tutorial
+
+### Lesson 8: ROS Image RGBD Tutorial
 
 #### Terminal 1
 $ source devel/setup.bash  
 
 
-### Lesson 8: ROS 2D Laser Tutorial
+
+### Lesson 9: ROS 2D Laser Tutorial
 
 [HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
 
@@ -143,7 +166,8 @@ $ source devel/setup.bash
 $ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
 
-### Lesson 9: ROS 3D Laser Tutorial
+
+### Lesson 10: ROS 3D Laser Tutorial
 
 #### Terminal 1
 $ source devel/setup.bash  
