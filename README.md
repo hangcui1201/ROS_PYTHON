@@ -165,7 +165,9 @@ $ rosrun rviz rviz
 $ source devel/setup.bash  
 $ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
-
+#### Terminal 5
+$ source devel/setup.bash  
+$ rosrun ros_2d_laser_tutorial laserscan_pointcloud.py     
 
 ### Lesson 10: ROS 3D Laser Tutorial
 
