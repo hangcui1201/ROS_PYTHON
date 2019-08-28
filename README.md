@@ -15,6 +15,13 @@ $ rosrun ros_topic_tutorial topic_publisher.py
 $ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_subscriber.py  
 
+#### Terminal 4  
+$ source devel/setup.bash  
+$ rostopic echo /ros_msg_change  
+
+#### Terminal 5  
+$ source devel/setup.bash  
+$ rosrun ros_topic_tutorial topic_pub_once.py  
 
 
 ### Lesson 2: ROS Service Tutorial
