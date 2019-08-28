@@ -182,15 +182,19 @@ $ roslaunch ros_2d_laser_tutorial tf_scan.launch
 
 #### Terminal 3
 $ source devel/setup.bash  
-$ rosrun rviz rviz  
+$ rosrun ros_2d_laser_tutorial laserscan_sub.py  
 
 #### Terminal 4
 $ source devel/setup.bash  
-$ rosrun ros_2d_laser_tutorial laserscan_sub.py  
+$ rosrun ros_2d_laser_tutorial laserscan_pointcloud.py  
 
 #### Terminal 5
 $ source devel/setup.bash  
-$ rosrun ros_2d_laser_tutorial laserscan_pointcloud.py     
+$ roslaunch ros_2d_laser_tutorial pointcloud_laserscan.launch  
+
+#### Terminal 6
+$ source devel/setup.bash  
+$ rosrun rviz rviz  
 
 ### Lesson 11: ROS 3D Laser Tutorial
 
