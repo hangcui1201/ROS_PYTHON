@@ -1,0 +1,12 @@
+<launch>
+	<!--
+		ROS node: topic_publisher_1, topic_publisher_2, topic_publisher_2
+    ROS topic: ros_msg_topic_1, ros_msg_topic_2, ros_msg_topic_3
+	-->
+  <node name="topic_publisher_1" pkg="ros_topic_tutorial" type="topic_publisher.py" args="ros_msg_topic:=ros_msg_topic_1"/>
+  <node name="topic_publisher_2" pkg="ros_topic_tutorial" type="topic_publisher.py" args="ros_msg_topic:=ros_msg_topic_2"/>
+  <node name="topic_publisher_3" pkg="ros_topic_tutorial" type="topic_publisher.py" args="ros_msg_topic:=ros_msg_topic_3"/>
+
+  <node name="topic_sub_user_data" pkg="ros_topic_tutorial" type="topic_sub_user_data.py" output="screen" /> 
+
+</launch>
