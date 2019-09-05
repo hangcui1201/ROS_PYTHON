@@ -43,7 +43,9 @@ $ roslaunch ros_topic_tutorial topic_sub_notify.launch
 $ source devel/setup.bash  
 $ roslaunch ros_topic_tutorial topic_connection_header.launch  
 
-
+#### Terminal 11  
+$ source devel/setup.bash  
+$ rosrun ros_topic_tutorial pub_advanced.py  
 
 
 ### Lesson 2: ROS Service Tutorial
