@@ -15,7 +15,7 @@ def publish_callback(event):
 if __name__== '__main__':
     try:
     	rospy.init_node('topic_publisher_timer', anonymous=True)
-    	pub_topic = rospy.Publisher('ros_topic_timer', String, queue_size=10)
+    	pub_topic = rospy.Publisher('ros_timer_topic', String, queue_size=10)
         timer = rospy.Timer(rospy.Duration(1. / 10), publish_callback)  # 10Hz
         rospy.spin()
     # When Ctrl+C is executed, it catches the exception

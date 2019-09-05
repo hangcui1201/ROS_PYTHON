@@ -23,6 +23,10 @@ $ rostopic echo /ros_msg_change
 $ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_pub_once.py  
 
+#### Terminal 6  
+$ source devel/setup.bash  
+$ rosrun ros_topic_tutorial topic_publisher_timer  
+
 
 ### Lesson 2: ROS Service Tutorial
 
