@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="topic_publisher_notify" pkg="ros_topic_tutorial" type="topic_sub_notify.py" output="screen" />
+
+  <node name="topic_subscriber_1" pkg="ros_topic_tutorial" type="topic_subscriber.py" output="screen" />
+  <node name="topic_subscriber_2" pkg="ros_topic_tutorial" type="topic_subscriber.py" output="screen" />
+
+</launch>
