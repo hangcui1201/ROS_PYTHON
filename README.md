@@ -31,6 +31,9 @@ $ rosrun ros_topic_tutorial topic_publisher_timer
 $ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_publisher_on_shutdown.py  
 
+#### Terminal 8  
+$ source devel/setup.bash  
+$ roslaunch ros_topic_tutorial topic_sub_user_data.launch  
 
 
 ### Lesson 2: ROS Service Tutorial
