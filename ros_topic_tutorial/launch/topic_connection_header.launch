@@ -1,0 +1,4 @@
+<launch>
+  <node name="sub_connection_header" pkg="ros_topic_tutorial" type="sub_connection_header.py" output="screen"/>
+  <node name="pub_connection_header" pkg="ros_topic_tutorial" type="pub_connection_header.py" />
+</launch>
