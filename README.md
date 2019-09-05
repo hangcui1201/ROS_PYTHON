@@ -39,6 +39,11 @@ $ roslaunch ros_topic_tutorial topic_sub_user_data.launch
 $ source devel/setup.bash  
 $ roslaunch ros_topic_tutorial topic_sub_notify.launch  
 
+#### Terminal 10  
+$ source devel/setup.bash  
+$ roslaunch ros_topic_tutorial topic_connection_header.launch  
+
+
 
 
 ### Lesson 2: ROS Service Tutorial
