@@ -8,16 +8,16 @@ from ros_topic_tutorial.msg import TopicMessage
 
 def msgCallback(msg):
 
-	ros_node_name = "ROS node: %s" % rosnode.get_node_names()
-	rospy.loginfo(ros_node_name)
+	# ros_node_name = "ROS node: %s" % rosnode.get_node_names()
+	# rospy.loginfo(ros_node_name)
 
 	# rospy.get_caller_id()
 
-	receive_secs = "recieve msg = %i" % msg.stamp.secs
-	rospy.loginfo(receive_secs)
+	# receive_secs = "recieve msg = %i" % msg.stamp.secs
+	# rospy.loginfo(receive_secs)
 
-	receive_nsecs = "recieve msg = %i" % msg.stamp.nsecs
-	rospy.loginfo(receive_nsecs)
+	# receive_nsecs = "recieve msg = %i" % msg.stamp.nsecs
+	# rospy.loginfo(receive_nsecs)
 
 	receive_count = "recieve msg = %i" % msg.count
 	rospy.loginfo(receive_count)
