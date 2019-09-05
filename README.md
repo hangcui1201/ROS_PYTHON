@@ -35,6 +35,11 @@ $ rosrun ros_topic_tutorial topic_publisher_on_shutdown.py
 $ source devel/setup.bash  
 $ roslaunch ros_topic_tutorial topic_sub_user_data.launch  
 
+#### Terminal 9  
+$ source devel/setup.bash  
+$ roslaunch ros_topic_tutorial topic_sub_notify.launch  
+
+
 
 ### Lesson 2: ROS Service Tutorial
 
