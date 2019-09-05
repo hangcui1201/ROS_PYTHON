@@ -48,6 +48,8 @@ $ source devel/setup.bash
 $ rosrun ros_topic_tutorial pub_advanced.py  
 
 
+
+
 ### Lesson 2: ROS Service Tutorial
 
 #### Terminal 1  
@@ -61,6 +63,15 @@ $ rosrun ros_service_tutorial service_server.py
 #### Terminal 3  
 $ source devel/setup.bash  
 $ rosrun ros_service_tutorial service_client.py 11 12  
+
+#### Terminal 4  
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial server_connection_header.py  
+
+#### Terminal 5  
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial client_connection_header.py 10 11  
+
 
 
 
@@ -77,6 +88,7 @@ $ rosrun ros_action_tutorial action_server.py
 #### Terminal 3  
 $ source devel/setup.bash  
 $ rosrun ros_action_tutorial action_client.py  
+
 
 
 
@@ -114,6 +126,7 @@ $ roslaunch ros_parameter_tutorial param_talker.launch
 
 
 
+
 ### Lesson 5: ROS Launch Tutorial
 
 #### Terminal 1
@@ -127,6 +140,7 @@ $ rosrun ros_launch_tutorial main.py
 #### Terminal 3
 $ source devel/setup.bash  
 $ rostopic echo /chatter  
+
 
 
 
@@ -159,6 +173,7 @@ $ rosrun ros_tf_tutorial frame_a_to_frame_b_listener.py
 
 
 
+
 ### Lesson 7: ROS Navigation Tutorial
 
 #### Terminal 1
@@ -175,6 +190,7 @@ $ rosrun ros_navigation_tutorial nav_goal.py
 
 
 
+
 ### Lesson 8: ROS Image Tutorial
 
 #### Terminal 1
@@ -187,10 +203,12 @@ $ rosrun ros_image_tutorial image_pub_sub.py
 
 
 
+
 ### Lesson 9: ROS Image RGBD Tutorial
 
 #### Terminal 1
 $ source devel/setup.bash  
+
 
 
 
@@ -223,6 +241,9 @@ $ roslaunch ros_2d_laser_tutorial pointcloud_laserscan.launch
 #### Terminal 6
 $ source devel/setup.bash  
 $ rosrun rviz rviz  
+
+
+
 
 ### Lesson 11: ROS 3D Laser Tutorial
 
