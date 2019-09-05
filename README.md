@@ -80,7 +80,7 @@ $ source devel/setup.bash
 $ rosrun ros_parameter_tutorial service_param_client.py 10 5  
 
 #### Terminal 4
-
+$ source devel/setup.bash  
 $ rosservice list  
 $ rosservice call /ros_service_param 10 5  
 
@@ -92,6 +92,10 @@ $ rosservice call /ros_service_param 10 5
 
 $ rosparam set /calculation_method 4  
 $ rosservice call /ros_service_param 10 5  
+
+#### Terminal 5
+$ source devel/setup.bash  
+$ roslaunch ros_parameter_tutorial param_talker.launch  
 
 
 
